@@ -41,7 +41,7 @@ async def startcmd(client, message):
         return
 
     instructions = [[InlineKeyboardButton(text="Instructions", callback_data="help")]]
-    await message.reply_sticker(sticker="CAADAQADCQADSQrhLZWMmF8vQqpqFgQ", quote=False)
+    await message.reply_sticker(sticker="CAADBQAD7gEAAnNQeFYRpychCuBa8QI", quote=False)
     await message.reply_text(START_TEXT, quote=False, disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup(instructions))
 
@@ -52,12 +52,12 @@ async def aboutcmd(client, message):
 
     MSG = "This bot is a research project made possible by VirusTotal, an Alphabet service which aggregates file scan" \
           " results various antivirus engines.\n\nInformation such as file hashes and scan results may be logged for" \
-          f" academic research and debugging purposes only.\n\nDisclosure: This bot was forked by {BOT_OWNER} and the" \
-          f" original source is linked below. You may create an issue in the original repository if there are any" \
+          f" academic research and debugging purposes only.\n\nDisclosure: Owner of this bot is {BOT_OWNER} and the" \
+          f" The source is linked below. You may create an issue in the original repository if there are any" \
           f" bugs with the source."
 
-    instructions = [[InlineKeyboardButton(text="Original Bot Repository",
-                                          url="https://github.com/pradhyumk/VirusTotal-File-Scan-Bot")]]
+    instructions = [[InlineKeyboardButton(text="Bot Source",
+                                          url="https://github.com/swatv3nub/VirusTotal-File-Scan-Bot")]]
 
     await message.reply_text(MSG, quote=False, disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup(instructions))
